@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --oipoto-pink: #F6CAD8;
+    --oipoto-blush: #FCE7ED;
+    --oipoto-cream: #FFF6EC;
+    --oipoto-rose: #D9B6C5;
+    --oipoto-lavender: #E7DDF3;
+    --oipoto-white: #FFFFFF;
+    --oipoto-text: #68525D;
+    --oipoto-ink: #4A3740;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #FFF6EC;
+    color: #4A3740;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Bricolage Grotesque', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
+  }
+
+  .font-mono-stamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
